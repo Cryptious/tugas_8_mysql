@@ -1,0 +1,18 @@
+1.Tampilkan kolom kota, kec, luas dan penduduk!
+2.Tampilkan kolom kota kemudian ubah namanya menjadi Nama Kota, kolom kec menjadi Jumlah Kecamatan dan kolom kel menjadi Jumlah Kelurahan!
+3.Tampilkan data dari table tugas_populasi berdasarkan Kecamatan dari jumlah terbesar!
+4.Urutkan berdasarkan kolom kel lalu diambil 5 data setelah baris ke-2!
+5.Tampilkan data dimana kolom kota berisi string Depok!
+6.
+7. Tampilkan isi tabel populasi dimana nilai kolom kecamatan antara 20 dan 30!
+
+Jawab
+1. SELECT kota, kec, luas, penduduk FROM tugas_populasi;
+2. SELECT kota as `Nama Kota`, kec AS `Jumlah Kecamatan`, kel AS `Jumlah Kelurahan` FROM tugas_populasi
+3. SELECT * FROM tugas_populasi ORDER BY kec DESC;
+4. SELECT * FROM tugas_populasi ORDER BY kel DESC Limit 3, 5;
+5. SELECT * FROM tugas_populasi where kota = 'Depok';
+6. Select tugas_daftar_provinsi.prov, tugas_populasi.kota, tugas_populasi.penduduk from tugas_daftar_provinsi
+Inner Join tugas_populasi
+on tugas_daftar_provinsi.ibukota = tugas_populasi.kota;
+7. SELECT * FROM tugas_populasi WHERE KEC Between '20' AND '30'
